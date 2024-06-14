@@ -1,5 +1,5 @@
-#import the class Employee from employee
-from employee import Employee
+#import the class Employee from employee. Imported child classes as well
+from employee import Employee, SalaryEmployee, HourlyEmployee
 
 #class
 class Company:
@@ -33,11 +33,11 @@ def main():
     #define my_company by calling the Company constructor
     my_company = Company()
 
-    employee1 = Employee('Carla', 'Giraldo', 50000)
+    employee1 = SalaryEmployee('Carla', 'Giraldo', 50000)
     my_company.add_employee(employee1)
-    employee2 = Employee('Samuel', 'Jackson', 100000)
+    employee2 = HourlyEmployee('Samuel', 'Jackson', 25, 50)
     my_company.add_employee(employee2)
-    employee3 = Employee('Frodo', 'Bolson', 2000)
+    employee3 = HourlyEmployee('Frodo', 'Bolson', 40, 15)
     my_company.add_employee(employee3)
 
     #calling of the methods in the Company class for them to work

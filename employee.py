@@ -26,4 +26,17 @@ class HourlyEmployee(Employee):
     
     def calculate_paycheck(self):
         return self.weekly_hours*self.hourly_rate
+
+#this class inherit from the salary employee class instead of the general employee class.
+#b/c they receive a regular salary plus comission.
+class ComissionEmployee(SalaryEmployee):
+    def __init__(self, fname, lname, salary, sales_num, comission_rate):
+        super().__init__(fname, lname, salary)
+        self.sales_num = sales_num
+        self.comission_rate = comission_rate
+
+    def calculate_paycheck(self):
+        regular_salary = super().calculate_paycheck()
+        total_comission = self.sales_num*self.comission_rate
+        return regular_salary + total_comission
         

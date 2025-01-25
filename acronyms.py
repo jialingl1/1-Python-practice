@@ -6,16 +6,7 @@ definition = input("What is the definition?\n")
 
 
 #open the file
-# found = False
-
-with open('acronyms.txt') as file:
-    for line in file:
-        if acronym in line:
-            print(line)
-            found = True
-            break
-
-if not found:
-    print("The acronym does not exist") 
+with open('acronyms.txt', 'a') as file:
+    file.write(acronym + ' - ' + definition + '\n')
 
 # write the new acronym and definition to the file

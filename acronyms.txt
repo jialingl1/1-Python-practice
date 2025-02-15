@@ -1,3 +1,4 @@
 OOP - Object Oriented Programming
 IaaS - Infastructure as a Service
 ML-Machine Learning
+AI - Artifitial intelligence

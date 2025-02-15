@@ -2,12 +2,18 @@ def find_acronym():
     look_up = input("What acronym would you like to look up?\n")
 
     found = False
-    with open('acronyms.txt') as file:
-        for line in file:
-            if look_up in line:
-                print(line)
-                found = True
-                break
+    #wrap in try except block to look for an exception
+    try:
+        with open('acronyms.txt') as file:
+            for line in file:
+                if look_up in line:
+                    print(line)
+                    found = True
+                    break
+    except FileNotFoundError as e:
+        print('File not found')
+        return
+    
     if not found:
         print("The acronym does not exist")
 

@@ -25,3 +25,16 @@ def add_acronym():
         file.write(acronym + ' - ' + definition + '\n')
 
     # write the new acronym and definition to the file
+
+#add main function
+        
+def main():
+    #ask user if they want to add or find a function
+    choice = input("Do you want to find(F) or add (A) an acrinym?\n")
+    if choice == 'F':
+        find_acronym()
+    elif choice == 'A':
+        add_acronym()
+
+#call main function
+main() 
